@@ -6,9 +6,11 @@ import _init_paths
 
 import os
 import cv2
+import torch
 
 from opts import opts
 from detectors.detector_factory import detector_factory
+torch.backends.cudnn.deterministic = True
 
 image_ext = ['jpg', 'jpeg', 'png', 'webp']
 video_ext = ['mp4', 'mov', 'avi', 'mkv']
